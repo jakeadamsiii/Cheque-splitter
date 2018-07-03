@@ -1,62 +1,181 @@
 .order-enter {
   -webkit-transform: translateX(-120%);
-          transform: translateX(-120%);
+  transform: translateX(-120%);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   max-height: 0;
   padding: 0 !important;
 }
+
 .order-enter.order-enter-active {
   max-height: 60px;
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
   padding: 2rem 0 !important;
 }
+
 .order-exit {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: translateX(0);
-          transform: translateX(0);
+  transform: translateX(0);
 }
+
 .order-exit.order-exit-active {
   -webkit-transform: translateX(120%);
-          transform: translateX(120%);
+  transform: translateX(120%);
   padding: 0;
 }
+
 .count-enter {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-transform: translateY(100%);
-          transform: translateY(100%);
+  transform: translateY(100%);
 }
+
 .count-enter.count-enter-active {
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
 }
+
 .count-exit {
   -webkit-transform: translateY(0);
-          transform: translateY(0);
+  transform: translateY(0);
   -webkit-transition: 0.5s;
   transition: 0.5s;
   position: absolute;
   left: 0;
   bottom: 0;
 }
+
 .count-exit.count-exit-active {
   -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
 }
-@font-face {
-  font-family: "haymakerregular";
-  src: url("./fonts/haymaker-webfont.eot");
-  src: url("./fonts/haymaker-webfont.eot?#iefix") format("embedded-opentype"), url("./fonts/haymaker-webfont.woff") format("woff"), url("./fonts/haymaker-webfont.ttf") format("truetype"), url("./fonts/haymaker-webfont.svg#haymakerregular") format("svg");
-  font-weight: normal;
-  font-style: normal;
+
+
+body, #main {
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-@font-face {
-  font-family: 'blanchcaps_inline';
-  src: url("./fonts/blanch_caps_inline-webfont.eot");
-  src: url("./fonts/blanch_caps_inline-webfont.eot?#iefix") format('embedded-opentype'), url("./fonts/blanch_caps_inline-webfont.woff") format('woff'), url("./fonts/blanch_caps_inline-webfont.ttf") format('truetype'), url("./fonts/blanch_caps_inline-webfont.svg#blanchcaps_inline") format('svg');
-  font-weight: normal;
-  font-style: normal;
+
+body{
+  background: linear-gradient(#fcb541, #ffca2a);
+  height:100vh;
 }
+
+body .title{
+  font-family: 'Arvo', serif;
+  font-size: 70px;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+body .title::before{
+  content:'';
+  width: 150px;
+  height:3px;
+  background:white;
+  position: absolute;
+  bottom:3px;
+}
+
+body .title::after{
+  content:'';
+  width: 205px;
+  height:3px;
+  background:white;
+  position: absolute;
+  bottom:3px;
+  right:0;
+}
+
+#main .item-input{
+  width:650px;
+}
+
+#main .item-input p{
+  text-align: center;
+  padding:1em;
+}
+
+#main .item-input-form{
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  width:600px;
+  margin:0 auto;
+}
+
+#main .item-input-form label{
+  /* margin-right: -10px; */
+}
+
+#main .item-input-form input{
+  padding:5px;
+  margin:5px;
+}
+
+#main .item-input-form input[name='name']{
+  width:100%;
+}
+#main .item-input-form input[name='price']{
+  width:30%;
+}
+#main .item-input-form input[name='quant']{
+  width:10%;
+}
+
+.order-wrap{
+  background: whitesmoke;
+  margin-top: 50px;
+}
+
+.order-wrap h2,
+.order-wrap p{
+  padding:5px;
+  width: 90%;
+  margin:0 auto;
+}
+
+.order-wrap h2{
+  padding-top:20px;
+}
+
+.order-wrap p{
+  border-top: 2px solid #333;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.order-wrap p span{
+  position: absolute;
+  right: 0;
+  font-weight: bold;
+  font-size:22px;
+}
+
+.order-wrap ul{
+  list-style: none;
+  padding:0;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.order-wrap li{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.order-wrap li .order-name{
+  width:75%;
+}
+/*# sourceMappingURL=src/css/style.css.map */
