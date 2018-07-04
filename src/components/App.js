@@ -1,6 +1,7 @@
 import React from 'react';
 import ItemInput from './ItemInput';
 import Order from './Order';
+import Options from './Options';
 
 
 class App extends React.Component{
@@ -24,6 +25,7 @@ class App extends React.Component{
             <div className='chequlator'>
                 <ItemInput addItem={this.addItem} order={this.state.orders} />
                 <Order addItem={this.addItem} order={this.state.orders} />
+                <Options order={this.state.orders}/>
             </div>
         )
     }
