@@ -26,7 +26,7 @@ class Order extends React.Component{
     render(){
         const orderIds = Object.keys(this.props.order);
         const total = orderIds.reduce((prevTotal, key) =>{
-        const order = this.props.order[key];
+                const order = this.props.order[key];
                 return prevTotal + (order.quant * order.price);
         }, 0);
         return (

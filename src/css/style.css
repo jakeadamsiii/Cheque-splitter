@@ -239,4 +239,60 @@ body .title::after{
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+}
+
+.evenlyForm .addTip{
+  font-size: 20px; 
+  margin: 40px auto 0;
+  width:100%;
+  text-align:center;
+  position: relative;
+}
+
+.evenlyForm .addTip::before,
+.evenlyForm .addTip::after{
+  content: '';
+  position: absolute;
+  height:3px;
+  width:40%;
+  background:whitesmoke;
+  top:57.5%;
+  transform: translateY(-50%);
+}
+
+.evenlyForm .addTip::before{
+  left:0;
+}
+
+.evenlyForm .addTip::after{
+  right:0;
+}
+
+.evenlyForm .tipOptions{
+  margin: 40px auto 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.evenlyForm .noOfPeople{
+  width: 40%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 40px auto 0;
+}
+
+.evenlyForm .noOfPeople label{
+  font-size: 20px; 
+}
+
+.evenlyForm .noOfPeople input{
+  width: auto;
+  max-width: 40px;
+  height: 30px;
+  font-size: 22px;
+  text-align: center;
 }

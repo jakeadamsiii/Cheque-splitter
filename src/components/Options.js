@@ -9,7 +9,7 @@ class Options extends React.Component{
             <section className='options'>
                 <p className='split-para'>How would you like to split it?</p>
                 <div className='split-buttons'>
-                <a href='/evenly'><button>Evenly</button></a>
+                <a href='/evenly' query={{ the: 'query' }}><button>Evenly</button></a>
                     <button>Itemise</button>
                     <button>Per Person</button>
                 </div>
