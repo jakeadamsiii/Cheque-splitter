@@ -17,7 +17,7 @@ class Order extends React.Component{
             <span className='order-name'>{order.name}</span>
             <span className='order-price'>£{order.price.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</span>
             <span className='order-quant'>{order.quant}</span>
-            
+            <button onClick={()=> this.props.removeFromOrder(key)}><i class="em em-x"></i></button>   
         </li>
         </CSSTransition>
         );
@@ -33,7 +33,7 @@ class Order extends React.Component{
             <div className='order-wrap'>
                 <h2>Order</h2>
                 <ul>
-                 {orderIds.map(this.renderOrder)}
+                 {orderIds.map(this.renderOrder)} 
                 </ul>
                 <p className='total'>Total: <span>£{total.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,')}</span></p>
             </div>

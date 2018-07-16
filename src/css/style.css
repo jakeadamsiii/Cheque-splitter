@@ -1,3 +1,13 @@
+input{
+  background: whitesmoke;
+    border: 1px solid lightgrey;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
 .order-enter {
   -webkit-transform: translateX(-120%);
   transform: translateX(-120%);
@@ -97,11 +107,11 @@ body .title::after{
   right:0;
 }
 
-#main p{
+ p{
   font-size:20px;
 }
 
-#main button{
+button{
   background: none;
   border:none;
   cursor: pointer;
@@ -184,6 +194,7 @@ body .title::after{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 2px 0;
 }
 
 .order-wrap li .order-name{
@@ -196,6 +207,11 @@ body .title::after{
   align-items: center;
   flex-direction: column;
   margin-top:50px;
+}
+
+.order-price{
+  width:70px;
+  text-align: right;
 }
 
 .options .split-para{
@@ -223,7 +239,8 @@ body .title::after{
   right:0;
 }
 
-#main .options button{
+#main .options button,
+.evenlyForm button{
   width:120px;
   height:30px;
   border: 2px solid #333;
@@ -232,6 +249,18 @@ body .title::after{
   text-transform: uppercase;
   font-family: 'Roboto', sans-serif;
   letter-spacing: 0.05em;
+  padding:0;
+}
+
+#main .options button a{
+  display: block;
+  width: 100%;
+  height: 24px;
+  padding: 0;
+  margin: 0;
+  color: black;
+  text-decoration: none;
+  line-height: 24px;
 }
 
 .evenlyForm{
@@ -270,7 +299,7 @@ body .title::after{
 }
 
 .evenlyForm .tipOptions{
-  margin: 40px auto 0;
+  margin: 30px auto 30px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -282,17 +311,77 @@ body .title::after{
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin: 40px auto 0;
+  margin: 30px auto 0;
 }
 
 .evenlyForm .noOfPeople label{
   font-size: 20px; 
 }
 
-.evenlyForm .noOfPeople input{
+.evenlyForm .noOfPeople input,
+.evenlyForm .moneybags input[type="number"]{
   width: auto;
   max-width: 40px;
   height: 30px;
   font-size: 22px;
   text-align: center;
+}
+
+.evenlyForm .moneybags input[type="number"]{
+  margin-left:10px;
+  max-width: 55px; 
+}
+
+.evenlyForm .total,
+.evenlyForm .owed{
+  font-size: 25px;
+  margin: 0px;
+}
+
+.evenlyForm .total span,
+.evenlyForm .owed span{
+  font-size: 25px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.evenlyForm .dollarSwitch i,
+.evenlyForm input[type="radio"]:checked{
+  display: none;
+}
+
+.evenlyForm input[type="radio"]:checked ~ i{
+  display: inline-block;
+}
+
+.evenlyForm .tipOptions label{
+  padding:3px;
+  font-size:20px;
+  height: 30px;
+}
+
+.evenlyForm .tipOptions label i{
+  margin-right: 7px;
+}
+
+.evenlyForm .owed{
+  height: 30px;
+  margin:20px auto;
+  position: relative;
+}
+
+.evenlyForm .owed:after{
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 0%;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: whitesmoke;
+  transition: width 1s ease;
+}
+
+.evenlyForm .owed.active:after{
+  width:120%;
 }
