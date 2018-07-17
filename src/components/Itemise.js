@@ -17,4 +17,4 @@ class Itemise extends React.Component{
     }
 }
 
-export default Itemise;
+export default Itemise; 
