@@ -198,7 +198,8 @@ button{
 }
 
 .order-wrap li .order-name{
-  width:75%;
+  width:70%;
+  overflow: hidden;
 }
 
 .options{
@@ -384,4 +385,92 @@ button{
 
 .evenlyForm .owed.active:after{
   width:120%;
+}
+
+.chequlator{
+  width: 650px;
+}
+
+@media only screen and (max-device-width: 820px){
+  body, #main{
+    width: 100%;
+    height: 100%;
+  }
+
+  #main .item-input,
+  .evenlyForm,
+  .chequlator{
+    width: 100%;
+  }
+  #main .item-input-form{
+    width:98%;
+  }
+
+  body .title{
+    font-size: 50px;
+  }
+
+  body .title::before{
+    width:110px;
+  }
+  body .title::after{
+    width:150px;
+  }
+
+  #main .item-input p{
+    margin-top:0;
+  }
+
+  .order-wrap{
+    width: 96%;
+    margin: 20px auto;
+  }
+  .options{
+    margin:0;
+    margin-bottom: 30px;
+  }
+
+  .options .split-para::before,
+  .options .split-para::after{
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top:-50%;
+  }
+  
+  .options .split-para::after{
+    top:150%;
+  }
+
+  .order-wrap li .order-name{
+    width:50%;
+  }
+
+  #main .options button{
+    width:200%;
+  }
+
+  .split-buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .evenlyForm{
+    margin-bottom:30px;
+  }
+
+  .evenlyForm .addTip::before, .evenlyForm .addTip::after{
+    width:30%;
+  }
+
+  .evenlyForm .noOfPeople{
+    width:80%;
+  }
+
+  #main .options button{
+    font-weight: bold;
+  }
+
 }
