@@ -241,7 +241,8 @@ button{
 }
 
 #main .options button,
-.evenlyForm button{
+.evenlyForm button,
+.itemiseForm .button{
   width:120px;
   height:30px;
   border: 2px solid #333;
@@ -390,6 +391,51 @@ button{
 .chequlator{
   width: 650px;
 }
+
+#main .itemiseForm{
+  width: 650px;
+
+}
+
+#main .itemiseForm form{
+  text-align: center;
+  padding: 0;
+  font-size:20px;
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 30px auto 0;
+  opacity:1;
+  transition: opacity 1s ease;
+}
+
+#main .itemiseForm form.fadeOut{
+  opacity:0;
+}
+
+#main .itemiseForm form label{
+  font-size:20px;
+}
+
+#main .itemiseForm form input{
+  width: auto;
+  max-width: 40px;
+  height: 30px;
+  font-size: 22px;
+  text-align: center;
+}
+
+.itemiseForm .button{
+  margin:20px auto 0;
+}
+
+
+.itemiseForm button:disabled{
+  display: none;
+}
+
 
 @media only screen and (max-device-width: 820px){
   body, #main{
